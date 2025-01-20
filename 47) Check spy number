@@ -1,0 +1,38 @@
+using System;
+
+namespace SpyNumberCheck
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Check if a Number is a Spy Number");
+
+            // Input: Number from the user
+            Console.Write("Enter a number: ");
+            int number = Convert.ToInt32(Console.ReadLine());
+
+            // Initialize variables for sum and product of digits
+            int sum = 0, product = 1, temp = number;
+
+            // Logic: Calculate sum and product of digits
+            while (temp > 0)
+            {
+                int digit = temp % 10; // Get the last digit
+                sum += digit;         // Add the digit to sum
+                product *= digit;     // Multiply the digit to product
+                temp /= 10;           // Remove the last digit
+            }
+
+            // Check if the number is a Spy Number
+            if (sum == product)
+            {
+                Console.WriteLine($"{number} is a Spy Number.");
+            }
+            else
+            {
+                Console.WriteLine($"{number} is not a Spy Number.");
+            }
+        }
+    }
+}
