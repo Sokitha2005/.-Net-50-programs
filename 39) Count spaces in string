@@ -1,0 +1,29 @@
+using System;
+
+namespace CountSpacesInString
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Count Spaces in a String");
+
+            // Input: String from the user
+            Console.Write("Enter a string: ");
+            string inputString = Console.ReadLine();
+
+            // Logic: Count spaces in the string
+            int spaceCount = 0;
+            foreach (char c in inputString)
+            {
+                if (c == ' ')
+                {
+                    spaceCount++;
+                }
+            }
+
+            // Output: Display the number of spaces
+            Console.WriteLine($"The number of spaces in the string is: {spaceCount}");
+        }
+    }
+}
