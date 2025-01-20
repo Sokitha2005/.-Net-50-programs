@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+
+namespace IntersectionOfArrays
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Define two arrays
+            int[] array1 = { 1, 2, 3, 4, 5 };
+            int[] array2 = { 3, 4, 5, 6, 7 };
+
+            // Find intersection
+            int[] intersection = FindIntersection(array1, array2);
+
+            // Display the intersection
+            Console.WriteLine("Intersection of the two arrays:");
+            foreach (int element in intersection)
+            {
+                Console.Write(element + " ");
+            }
+        }
+
+        static int[] FindIntersection(int[] arr1, int[] arr2)
+        {
+            // Use HashSet for efficient intersection
+            HashSet<int> set1 = new HashSet<int>(arr1);
+            HashSet<int> intersectionSet = new HashSet<int>();
+
+            foreach (int element in arr2)
+            {
+                if (set1.Contains(element))
+                {
+                    intersectionSet.Add(element);
+                }
+            }
+
+            // Convert HashSet to array and return
+            return new List<int>(intersectionSet).ToArray();
+        }
+    }
+}
