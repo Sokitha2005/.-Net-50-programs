@@ -1,0 +1,22 @@
+using System;
+
+namespace DecimalToHexadecimal
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Convert Decimal to Hexadecimal");
+
+            // Input: Decimal number from the user
+            Console.Write("Enter a decimal number: ");
+            int decimalNumber = Convert.ToInt32(Console.ReadLine());
+
+            // Logic: Convert decimal to hexadecimal
+            string hexadecimalNumber = Convert.ToString(decimalNumber, 16).ToUpper();
+
+            // Output: Display the hexadecimal equivalent
+            Console.WriteLine($"The hexadecimal equivalent of {decimalNumber} is: {hexadecimalNumber}");
+        }
+    }
+}
