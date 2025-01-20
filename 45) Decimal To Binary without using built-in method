@@ -1,0 +1,30 @@
+using System;
+
+namespace DecimalToBinary
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Convert Decimal to Binary Without Built-In Method");
+
+            // Input: Decimal number from the user
+            Console.Write("Enter a decimal number: ");
+            int decimalNumber = Convert.ToInt32(Console.ReadLine());
+
+            // Logic: Convert decimal to binary manually
+            string binaryNumber = "";
+            int quotient = decimalNumber;
+
+            while (quotient > 0)
+            {
+                int remainder = quotient % 2;  // Get the remainder
+                binaryNumber = remainder + binaryNumber; // Prepend the remainder to the binary result
+                quotient /= 2; // Divide by 2 for the next step
+            }
+
+            // Output: Display the binary equivalent
+            Console.WriteLine($"The binary equivalent of {decimalNumber} is: {binaryNumber}");
+        }
+    }
+}
