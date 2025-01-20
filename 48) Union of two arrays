@@ -1,0 +1,39 @@
+using System;
+
+namespace UnionOfArrays
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // First array
+            int[] array1 = { 1, 2, 3, 4 };
+
+            // Second array
+            int[] array2 = { 3, 4, 5, 6 };
+
+            // Find union
+            int[] unionArray = FindUnion(array1, array2);
+
+            // Output: Display the union
+            Console.WriteLine("Union of the arrays:");
+            foreach (int element in unionArray)
+            {
+                Console.Write(element + " ");
+            }
+        }
+
+        static int[] FindUnion(int[] arr1, int[] arr2)
+        {
+            // Combine both arrays and remove duplicates using HashSet
+            var unionSet = new HashSet<int>(arr1);
+            foreach (var element in arr2)
+            {
+                unionSet.Add(element);
+            }
+
+            // Convert HashSet to array and return
+            return unionSet.ToArray();
+        }
+    }
+}
