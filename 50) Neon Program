@@ -1,0 +1,27 @@
+using System;
+
+namespace NeonNumberCheck
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter a number: ");
+            int number = Convert.ToInt32(Console.ReadLine());
+
+            int square = number * number;
+            int sum = 0;
+
+            while (square > 0)
+            {
+                sum += square % 10;
+                square /= 10;
+            }
+
+            if (sum == number)
+                Console.WriteLine($"{number} is a Neon Number.");
+            else
+                Console.WriteLine($"{number} is not a Neon Number.");
+        }
+    }
+}
