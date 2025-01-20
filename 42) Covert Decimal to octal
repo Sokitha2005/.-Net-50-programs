@@ -1,0 +1,22 @@
+using System;
+
+namespace DecimalToOctal
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Convert Decimal to Octal");
+
+            // Input: Decimal number from the user
+            Console.Write("Enter a decimal number: ");
+            int decimalNumber = Convert.ToInt32(Console.ReadLine());
+
+            // Logic: Convert decimal to octal
+            string octalNumber = Convert.ToString(decimalNumber, 8);
+
+            // Output: Display the octal equivalent
+            Console.WriteLine($"The octal equivalent of {decimalNumber} is: {octalNumber}");
+        }
+    }
+}
