@@ -1,0 +1,18 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Find Length of an Array");
+
+        // Define an array
+        int[] numbers = { 34, 7, 23, 32, 5, 62 };
+
+        // Find the length of the array
+        int length = numbers.Length;
+
+        // Display the length of the array
+        Console.WriteLine("The length of the array is: " + length);
+    }
+}
