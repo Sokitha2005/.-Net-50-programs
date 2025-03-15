@@ -1,0 +1,44 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Find Largest Three Numbers");
+
+        // Ask the user how many numbers they want to input
+        Console.WriteLine("Enter the number of elements:");
+        int n = Convert.ToInt32(Console.ReadLine());
+
+        // Initialize an array to hold the numbers
+        int[] numbers = new int[n];
+
+        // Read the numbers from the user
+        Console.WriteLine("Enter the numbers:");
+        for (int i = 0; i < n; i++)
+        {
+            numbers[i] = Convert.ToInt32(Console.ReadLine());
+        }
+
+        // Find the largest three numbers
+        FindLargestThree(numbers);
+    }
+
+    // Method to find the largest three numbers
+    static void FindLargestThree(int[] nums)
+    {
+        // Sort the array in descending order
+        Array.Sort(nums);
+        Array.Reverse(nums);
+
+        // Display the largest three numbers
+        if (nums.Length >= 3)
+        {
+            Console.WriteLine($"The largest three numbers are: {nums[0]}, {nums[1]}, {nums[2]}");
+        }
+        else
+        {
+            Console.WriteLine("There are fewer than three numbers.");
+        }
+    }
+}
