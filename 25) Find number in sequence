@@ -1,0 +1,29 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Find Number in Sequence");
+
+        // Define a sequence (array of numbers)
+        int[] sequence = { 10, 25, 35, 50, 75, 100, 150, 200 };
+
+        // Ask the user to input a number to search
+        Console.WriteLine("Enter the number you want to find in the sequence:");
+        int numberToFind = Convert.ToInt32(Console.ReadLine());
+
+        // Find the number in the sequence
+        int index = Array.IndexOf(sequence, numberToFind);
+
+        // Check if the number was found
+        if (index >= 0)
+        {
+            Console.WriteLine($"The number {numberToFind} is found at index {index}.");
+        }
+        else
+        {
+            Console.WriteLine($"The number {numberToFind} is not found in the sequence.");
+        }
+    }
+}
