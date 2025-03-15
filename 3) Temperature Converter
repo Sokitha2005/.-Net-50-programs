@@ -1,0 +1,21 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Temperature Converter");
+        Console.WriteLine("Choose the conversion option:");
+        Console.WriteLine("1. Celsius to Fahrenheit");
+        Console.WriteLine("2. Fahrenheit to Celsius");
+        Console.WriteLine("3. Celsius to Kelvin");
+        Console.WriteLine("4. Kelvin to Celsius");
+        Console.WriteLine("5. Fahrenheit to Kelvin");
+        Console.WriteLine("6. Kelvin to Fahrenheit");
+        
+        // Read the user's choice
+        int choice = Convert.ToInt32(Console.ReadLine());
+        
+        // Input the temperature
+        Console.WriteLine("Enter the temperature value:");
+        double temperature = Convert.T
