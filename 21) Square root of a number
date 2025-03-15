@@ -1,0 +1,27 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Square Root Calculator");
+
+        // Ask the user for a number
+        Console.WriteLine("Enter a number to find its square root:");
+        double number = Convert.ToDouble(Console.ReadLine());
+
+        // Calculate the square root using Math.Sqrt()
+        double squareRoot = Math.Sqrt(number);
+
+        // Check if the number is negative (square root of negative numbers isn't real)
+        if (number < 0)
+        {
+            Console.WriteLine("Cannot calculate the square root of a negative number.");
+        }
+        else
+        {
+            // Output the result
+            Console.WriteLine($"The square root of {number} is: {squareRoot}");
+        }
+    }
+}
