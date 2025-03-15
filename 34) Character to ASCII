@@ -1,0 +1,19 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Character to ASCII Converter");
+
+        // Ask the user for input
+        Console.WriteLine("Enter a character:");
+        char character = Console.ReadKey().KeyChar;  // Read a single character
+
+        // Convert character to ASCII (integer representation)
+        int asciiValue = Convert.ToInt32(character);
+
+        // Display the ASCII value
+        Console.WriteLine($"\nThe ASCII value of '{character}' is {asciiValue}.");
+    }
+}
