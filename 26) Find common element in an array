@@ -1,0 +1,24 @@
+using System;
+using System.Linq;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Find Common Elements in Two Arrays");
+
+        // Define two arrays
+        int[] array1 = { 1, 2, 3, 4, 5, 6 };
+        int[] array2 = { 4, 5, 6, 7, 8, 9 };
+
+        // Find the common elements using LINQ
+        var commonElements = array1.Intersect(array2);
+
+        // Display the common elements
+        Console.WriteLine("Common elements in both arrays:");
+        foreach (var element in commonElements)
+        {
+            Console.WriteLine(element);
+        }
+    }
+}
