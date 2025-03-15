@@ -1,0 +1,42 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("GCD and LCM Calculator");
+
+        // Ask the user to input two numbers
+        Console.WriteLine("Enter the first number:");
+        int num1 = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine("Enter the second number:");
+        int num2 = Convert.ToInt32(Console.ReadLine());
+
+        // Calculate the GCD and LCM
+        int gcd = FindGCD(num1, num2);
+        int lcm = FindLCM(num1, num2, gcd);
+
+        // Output the result
+        Console.WriteLine($"The GCD of {num1} and {num2} is: {gcd}");
+        Console.WriteLine($"The LCM of {num1} and {num2} is: {lcm}");
+    }
+
+    // Method to find the GCD using Euclidean algorithm
+    static int FindGCD(int a, int b)
+    {
+        while (b != 0)
+        {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
+    }
+
+    // Method to find the LCM
+    static int FindLCM(int a, int b, int gcd)
+    {
+        return (a * b) / gcd;
+    }
+}
