@@ -1,0 +1,35 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Factorial Calculator");
+        Console.WriteLine("Enter a number to calculate its factorial:");
+
+        // Read the user's input
+        int number = Convert.ToInt32(Console.ReadLine());
+
+        // Calculate the factorial using a method
+        long factorial = CalculateFactorial(number);
+
+        // Output the result
+        Console.WriteLine($"The factorial of {number} is: {factorial}");
+    }
+
+    // Method to calculate the factorial
+    static long CalculateFactorial(int num)
+    {
+        if (num == 0 || num == 1)
+            return 1;  // Base case: 0! = 1 and 1! = 1
+        else
+        {
+            long result = 1;
+            for (int i = 1; i <= num; i++)
+            {
+                result *= i;
+            }
+            return result;
+        }
+    }
+}
