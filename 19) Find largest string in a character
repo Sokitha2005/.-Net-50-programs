@@ -1,0 +1,37 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Find Largest Character in a String");
+
+        // Ask the user for a string input
+        Console.WriteLine("Enter a string:");
+        string input = Console.ReadLine();
+
+        // Find the largest character
+        char largestChar = FindLargestCharacter(input);
+
+        // Output the result
+        Console.WriteLine($"The largest character in the string is: {largestChar}");
+    }
+
+    // Method to find the largest character in the string
+    static char FindLargestCharacter(string input)
+    {
+        // Initialize the largest character to the first character
+        char largestChar = input[0];
+
+        // Loop through the string and compare each character
+        foreach (char ch in input)
+        {
+            if (ch > largestChar)
+            {
+                largestChar = ch;
+            }
+        }
+
+        return largestChar;
+    }
+}
