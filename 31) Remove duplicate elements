@@ -1,0 +1,23 @@
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Remove Duplicate Elements");
+
+        // Define an array with duplicate elements
+        int[] numbers = { 1, 2, 2, 3, 4, 4, 5, 5, 6 };
+
+        // Use a HashSet to remove duplicates
+        HashSet<int> uniqueNumbers = new HashSet<int>(numbers);
+
+        // Display the result
+        Console.WriteLine("Array after removing duplicates:");
+        foreach (int number in uniqueNumbers)
+        {
+            Console.WriteLine(number);
+        }
+    }
+}
