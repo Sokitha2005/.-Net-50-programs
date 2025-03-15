@@ -1,0 +1,33 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Find Middle Element of Array");
+
+        // Define an array (example)
+        int[] numbers = { 1, 2, 3, 4, 5, 6, 7 };
+
+        // Check if the array is not empty
+        if (numbers.Length == 0)
+        {
+            Console.WriteLine("The array is empty.");
+            return;
+        }
+
+        // Find the middle element index
+        int middleIndex = numbers.Length / 2;
+
+        // If the length of the array is odd, we return the single middle element
+        if (numbers.Length % 2 != 0)
+        {
+            Console.WriteLine("Middle element: " + numbers[middleIndex]);
+        }
+        else
+        {
+            // If the array has even length, we return the two middle elements
+            Console.WriteLine("Middle elements: " + numbers[middleIndex - 1] + " and " + numbers[middleIndex]);
+        }
+    }
+}
