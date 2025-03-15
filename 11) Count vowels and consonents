@@ -1,0 +1,39 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Vowel and Consonant Counter");
+        
+        // Ask the user for a string input
+        Console.WriteLine("Enter a string:");
+        string input = Console.ReadLine().ToLower(); // Convert to lowercase to make it case-insensitive
+
+        // Initialize counters for vowels and consonants
+        int vowelCount = 0;
+        int consonantCount = 0;
+
+        // Loop through each character in the input string
+        foreach (char ch in input)
+        {
+            // Check if the character is a letter
+            if (char.IsLetter(ch))
+            {
+                // Check if the character is a vowel
+                if ("aeiou".Contains(ch))
+                {
+                    vowelCount++;
+                }
+                else
+                {
+                    consonantCount++;
+                }
+            }
+        }
+
+        // Output the result
+        Console.WriteLine($"Vowels: {vowelCount}");
+        Console.WriteLine($"Consonants: {consonantCount}");
+    }
+}
