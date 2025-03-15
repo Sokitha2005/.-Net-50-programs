@@ -1,0 +1,33 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Simple Interest Calculator");
+        
+        // Input the principal amount
+        Console.WriteLine("Enter the principal amount (P):");
+        double principal = Convert.ToDouble(Console.ReadLine());
+
+        // Input the rate of interest
+        Console.WriteLine("Enter the rate of interest (R) in percentage:");
+        double rate = Convert.ToDouble(Console.ReadLine());
+
+        // Input the time period
+        Console.WriteLine("Enter the time period (T) in years:");
+        double time = Convert.ToDouble(Console.ReadLine());
+
+        // Calculate Simple Interest
+        double simpleInterest = CalculateSimpleInterest(principal, rate, time);
+
+        // Output the result
+        Console.WriteLine($"The Simple Interest is: {simpleInterest}");
+    }
+
+    // Method to calculate Simple Interest
+    static double CalculateSimpleInterest(double principal, double rate, double time)
+    {
+        return (principal * rate * time) / 100;
+    }
+}
