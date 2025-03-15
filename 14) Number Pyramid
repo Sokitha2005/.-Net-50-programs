@@ -1,0 +1,38 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Number Pyramid");
+
+        // Ask the user for the height of the pyramid
+        Console.WriteLine("Enter the height of the pyramid:");
+        int height = Convert.ToInt32(Console.ReadLine());
+
+        // Print the pyramid
+        PrintPyramid(height);
+    }
+
+    // Method to print the number pyramid
+    static void PrintPyramid(int height)
+    {
+        for (int i = 1; i <= height; i++) // Loop for each row
+        {
+            // Print leading spaces for alignment
+            for (int j = i; j < height; j++)
+            {
+                Console.Write(" ");
+            }
+
+            // Print the numbers in each row
+            for (int k = 1; k <= i; k++)
+            {
+                Console.Write(k + " ");
+            }
+
+            // Move to the next line after each row
+            Console.WriteLine();
+        }
+    }
+}
