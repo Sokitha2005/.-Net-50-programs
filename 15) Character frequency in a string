@@ -1,0 +1,48 @@
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Character Frequency Counter");
+
+        // Ask the user for a string input
+        Console.WriteLine("Enter a string:");
+        string input = Console.ReadLine();
+
+        // Count the frequency of each character
+        Dictionary<char, int> charFrequency = CountCharacterFrequency(input);
+
+        // Output the frequency of each character
+        Console.WriteLine("Character frequencies:");
+        foreach (var entry in charFrequency)
+        {
+            Console.WriteLine($"{entry.Key}: {entry.Value}");
+        }
+    }
+
+    // Method to count the frequency of characters in a string
+    static Dictionary<char, int> CountCharacterFrequency(string input)
+    {
+        // Create a dictionary to store character frequencies
+        Dictionary<char, int> frequencyMap = new Dictionary<char, int>();
+
+        // Loop through each character in the string
+        foreach (char c in input)
+        {
+            if (frequencyMap.ContainsKey(c))
+            {
+                // If the character is already in the dictionary, increment its count
+                frequencyMap[c]++;
+            }
+            else
+            {
+                // Otherwise, add the character to the dictionary with count 1
+                frequencyMap[c] = 1;
+            }
+        }
+
+        return frequencyMap;
+    }
+}
