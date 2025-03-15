@@ -1,0 +1,29 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Sort Array in Ascending Order");
+
+        // Define an array
+        int[] numbers = { 34, 7, 23, 32, 5, 62 };
+
+        // Display the original array
+        Console.WriteLine("Original Array:");
+        foreach (int num in numbers)
+        {
+            Console.Write(num + " ");
+        }
+
+        // Sort the array in ascending order
+        Array.Sort(numbers);
+
+        // Display the sorted array
+        Console.WriteLine("\nArray in Ascending Order:");
+        foreach (int num in numbers)
+        {
+            Console.Write(num + " ");
+        }
+    }
+}
