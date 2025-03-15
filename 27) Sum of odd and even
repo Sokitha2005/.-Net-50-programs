@@ -1,0 +1,33 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Sum of Odd and Even Numbers");
+
+        // Define an array of integers
+        int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+        // Initialize variables to hold the sum of odd and even numbers
+        int evenSum = 0;
+        int oddSum = 0;
+
+        // Loop through the array to separate and sum odd and even numbers
+        foreach (int number in numbers)
+        {
+            if (number % 2 == 0)  // Check if the number is even
+            {
+                evenSum += number;
+            }
+            else  // Otherwise, the number is odd
+            {
+                oddSum += number;
+            }
+        }
+
+        // Output the results
+        Console.WriteLine($"Sum of even numbers: {evenSum}");
+        Console.WriteLine($"Sum of odd numbers: {oddSum}");
+    }
+}
