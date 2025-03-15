@@ -1,0 +1,45 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Find Minimum Number");
+        
+        // Ask the user how many numbers they want to enter
+        Console.WriteLine("Enter the number of elements:");
+        int n = Convert.ToInt32(Console.ReadLine());
+
+        // Initialize the array to hold the numbers
+        int[] numbers = new int[n];
+
+        // Read the numbers from the user
+        Console.WriteLine("Enter the numbers:");
+        for (int i = 0; i < n; i++)
+        {
+            numbers[i] = Convert.ToInt32(Console.ReadLine());
+        }
+
+        // Find the minimum number
+        int minNumber = FindMinimum(numbers);
+
+        // Output the result
+        Console.WriteLine($"The minimum number is: {minNumber}");
+    }
+
+    // Method to find the minimum number
+    static int FindMinimum(int[] nums)
+    {
+        int min = nums[0];
+
+        for (int i = 1; i < nums.Length; i++)
+        {
+            if (nums[i] < min)
+            {
+                min = nums[i];
+            }
+        }
+
+        return min;
+    }
+}
