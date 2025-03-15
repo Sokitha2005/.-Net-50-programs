@@ -1,0 +1,32 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Sort Array in Descending Order");
+
+        // Define an array
+        int[] numbers = { 34, 7, 23, 32, 5, 62 };
+
+        // Display the original array
+        Console.WriteLine("Original Array:");
+        foreach (int num in numbers)
+        {
+            Console.Write(num + " ");
+        }
+
+        // Sort the array in ascending order
+        Array.Sort(numbers);
+
+        // Reverse the array to make it in descending order
+        Array.Reverse(numbers);
+
+        // Display the sorted array in descending order
+        Console.WriteLine("\nArray in Descending Order:");
+        foreach (int num in numbers)
+        {
+            Console.Write(num + " ");
+        }
+    }
+}
