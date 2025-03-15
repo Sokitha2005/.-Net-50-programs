@@ -1,0 +1,38 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Random Number Checker");
+
+        // Create a random number generator
+        Random rand = new Random();
+
+        // Generate a random number between 1 and 100
+        int randomNumber = rand.Next(1, 101);  // Range: 1 to 100 (inclusive)
+
+        // Display the generated random number
+        Console.WriteLine($"Generated Random Number: {randomNumber}");
+
+        // Check if the number is even or odd
+        if (randomNumber % 2 == 0)
+        {
+            Console.WriteLine($"{randomNumber} is an even number.");
+        }
+        else
+        {
+            Console.WriteLine($"{randomNumber} is an odd number.");
+        }
+
+        // Check if the number is in a specific range (e.g., between 50 and 75)
+        if (randomNumber >= 50 && randomNumber <= 75)
+        {
+            Console.WriteLine($"{randomNumber} is between 50 and 75.");
+        }
+        else
+        {
+            Console.WriteLine($"{randomNumber} is not between 50 and 75.");
+        }
+    }
+}
