@@ -1,0 +1,23 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Check Divisibility by 3 and 5");
+
+        // Ask the user to input a number
+        Console.WriteLine("Enter a number:");
+        int number = Convert.ToInt32(Console.ReadLine());
+
+        // Check if the number is divisible by both 3 and 5
+        if (number % 3 == 0 && number % 5 == 0)
+        {
+            Console.WriteLine($"{number} is divisible by both 3 and 5.");
+        }
+        else
+        {
+            Console.WriteLine($"{number} is not divisible by both 3 and 5.");
+        }
+    }
+}
