@@ -1,0 +1,31 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Find Even Numbers in an Array");
+
+        // Define an array
+        int[] numbers = { 12, 15, 22, 37, 40, 55, 60, 73, 88, 99 };
+
+        // Display the numbers in the array
+        Console.WriteLine("Array elements:");
+        foreach (int num in numbers)
+        {
+            Console.Write(num + " ");
+        }
+
+        Console.WriteLine(); // Line break
+
+        // Find and display even numbers in the array
+        Console.WriteLine("Even numbers in the array:");
+        foreach (int num in numbers)
+        {
+            if (num % 2 == 0)
+            {
+                Console.Write(num + " ");
+            }
+        }
+    }
+}
