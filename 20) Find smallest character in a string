@@ -1,0 +1,37 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Find Smallest Character in a String");
+
+        // Ask the user for a string input
+        Console.WriteLine("Enter a string:");
+        string input = Console.ReadLine();
+
+        // Find the smallest character
+        char smallestChar = FindSmallestCharacter(input);
+
+        // Output the result
+        Console.WriteLine($"The smallest character in the string is: {smallestChar}");
+    }
+
+    // Method to find the smallest character in the string
+    static char FindSmallestCharacter(string input)
+    {
+        // Initialize the smallest character to the first character
+        char smallestChar = input[0];
+
+        // Loop through the string and compare each character
+        foreach (char ch in input)
+        {
+            if (ch < smallestChar)
+            {
+                smallestChar = ch;
+            }
+        }
+
+        return smallestChar;
+    }
+}
